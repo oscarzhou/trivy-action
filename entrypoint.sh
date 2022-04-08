@@ -134,7 +134,7 @@ echo "Running trivy with options: ${ARGS}" "${artifactRef}"
 echo "Global options: " "${GLOBAL_ARGS}"
 echo "trivy version"
 trivy --version
-trivy $GLOBAL_ARGS ${scanType} $ARGS ${artifactRef}
+trivy --debug $GLOBAL_ARGS ${scanType} $ARGS ${artifactRef}
 returnCode=$?
 
 # SARIF is special. We output all vulnerabilities,
