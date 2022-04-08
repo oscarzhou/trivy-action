@@ -135,7 +135,7 @@ echo "Global options: " "${GLOBAL_ARGS}"
 echo "trivy version"
 trivy --version
 echo "run trivy image oscarzhou/trivy-portainer:latest"
-trivy image trivy-portainer:latest
+trivy image portainer/portainer-ee:2.12.2
 trivy $GLOBAL_ARGS ${scanType} $ARGS ${artifactRef}
 returnCode=$?
 
