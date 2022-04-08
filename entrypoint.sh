@@ -134,8 +134,8 @@ echo "Running trivy with options: ${ARGS}" "${artifactRef}"
 echo "Global options: " "${GLOBAL_ARGS}"
 echo "trivy version"
 trivy --version
-echo "list docker images"
-/usr/bin/docker images
+echo "run trivy image oscarzhou/trivy-portainer:latest"
+trivy image oscarzhou/trivy-portainer:latest
 trivy $GLOBAL_ARGS ${scanType} $ARGS ${artifactRef}
 returnCode=$?
 
