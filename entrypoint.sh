@@ -135,7 +135,7 @@ echo "Global options: " "${GLOBAL_ARGS}"
 echo "trivy version"
 trivy --version
 echo "list docker images"
-docker images
+/usr/bin/docker images
 trivy $GLOBAL_ARGS ${scanType} $ARGS ${artifactRef}
 returnCode=$?
 
