@@ -132,8 +132,6 @@ fi
 
 echo "Running trivy with options: ${ARGS}" "${artifactRef}"
 echo "Global options: " "${GLOBAL_ARGS}"
-echo "trivy version"
-trivy --version
 trivy --debug $GLOBAL_ARGS ${scanType} $ARGS ${artifactRef}
 returnCode=$?
 
